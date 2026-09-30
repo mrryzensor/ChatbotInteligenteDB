@@ -17,6 +17,7 @@ import {
   DollarSign,
 } from 'lucide-react';
 import { WhatsAppStatus, AuthUser } from '../../types';
+import { ThemeToggle } from '../ui/ThemeToggle';
 
 export type NavTab =
   | 'dashboard'
@@ -164,6 +165,12 @@ export const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
               : 'Desconectado'}
           </span>
         </div>
+      </div>
+
+      {/* Theme Switcher Row */}
+      <div className="px-4 py-1.5 flex items-center justify-between text-xs">
+        <span className="text-slate-400 font-medium text-[11px]">Tema de Interfaz</span>
+        <ThemeToggle showLabel className="py-1 px-2.5 text-[11px]" />
       </div>
 
       {/* User Session & Logout Card */}

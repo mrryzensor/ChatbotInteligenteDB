@@ -35,7 +35,8 @@ import { useToast } from '../../context/ToastContext';
 import { Modal } from '../ui/Modal';
 
 export const FinanceView: React.FC = () => {
-  const { addToast } = useToast();
+  const toast = useToast();
+  const addToast = (msg: string, type: 'success' | 'error' | 'warning' | 'info' = 'info') => toast.showToast(type, msg);
   const [activeTab, setActiveTab] = useState<'bills' | 'vouchers' | 'plans' | 'ai_assistant'>('bills');
   const [loading, setLoading] = useState(true);
 

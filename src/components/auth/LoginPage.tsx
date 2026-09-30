@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Sparkles, Mail, Lock, Eye, EyeOff, Loader2, AlertCircle, ShieldCheck } from 'lucide-react';
 import { api } from '../../services/api';
 import { AuthUser } from '../../types';
+import { ThemeToggle } from '../ui/ThemeToggle';
 
 interface LoginPageProps {
   onLoginSuccess: (user: AuthUser) => void;
@@ -36,6 +37,11 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
 
   return (
     <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-4 sm:p-6 select-none relative overflow-hidden">
+      {/* Top right theme toggle */}
+      <div className="absolute top-5 right-5 z-20">
+        <ThemeToggle showLabel />
+      </div>
+
       {/* Background Subtle Gradient Blobs */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />

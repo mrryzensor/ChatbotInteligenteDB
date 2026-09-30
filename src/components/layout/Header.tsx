@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bot, Power, Sparkles, AlertCircle, LogOut, User } from 'lucide-react';
 import { WhatsAppStatus, AppSettings, AuthUser } from '../../types';
+import { ThemeToggle } from '../ui/ThemeToggle';
 
 interface HeaderProps {
   title: string;
@@ -73,6 +74,9 @@ export const Header: React.FC<HeaderProps> = ({
             <Power className="w-3 h-3 ml-1" />
           </button>
         )}
+
+        {/* Theme Toggle Button (Light / Dark) */}
+        <ThemeToggle />
 
         {/* WhatsApp Status Badge */}
         <div

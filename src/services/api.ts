@@ -16,6 +16,12 @@ import {
   FinancialStatsRecord,
   DebtorSummaryRecord,
   AdminContactRecord,
+  BookingStats,
+  AppointmentRecord,
+  ScheduleRuleRecord,
+  BookingServiceRecord,
+  CourseRecord,
+  StudentRecord,
 } from '../types';
 
 const BASE_URL = '/api';
